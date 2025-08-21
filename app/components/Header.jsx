@@ -1,7 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
 import Logo from "@/app/assets/images/logo.svg"
-import {FaUber, FaSignInAlt,FaSignOutAlt,FaBuilding, FaUser} from "react-icons/fa"
+import {FaSignInAlt,FaSignOutAlt,FaBuilding, FaUser} from "react-icons/fa"
+import { GrResources } from "react-icons/gr";
+
 const Header = () => {
   return (
       //<!-- Header -->
@@ -27,13 +29,13 @@ const Header = () => {
                 </Link>
                 {/*<!-- Logged In Only -->*/}
                 <Link
-                  href="/bookings.html"
+                  href="/bookings"
                   className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
                 >
                   Bookings
                 </Link>
                 <Link
-                  href="/add-room.html"
+                  href="/add-room"
                   className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
                 >
                   Add Room
@@ -46,22 +48,22 @@ const Header = () => {
             <div className="ml-4 flex items-center md:ml-6">
              {/*<!-- Logged Out Only -->*/} 
               <Link
-                href="login.html"
+                href="/login"
                 className="mr-3 text-gray-800 hover:text-gray-600"
               >
                 <FaUser className=" inline mr-1"/> Login
               </Link>
               <Link
-                href="/"
+                href="/register"
                 className="mr-3 text-gray-800 hover:text-gray-600"
               >
                 <FaSignInAlt className=" inline mr-1" /> Register
               </Link>
-              <Link href="my-rooms.html">
-                <FaBuilding className=" inline mr-1"/> My Rooms
+              <Link href="/my-rooms">
+                <GrResources className=" inline mr-1"/> My Source
               </Link>
               <Link
-                href="login.html"
+                href="/login"
                 className="mx-3 text-gray-800 hover:text-gray-600"
               >
                 <FaSignOutAlt className=" inline mr-1"/>   Sign Out
