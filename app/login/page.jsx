@@ -10,7 +10,7 @@ const Page = () => {
             </h2>
 
             <div className="mb-4">
-              <label for="email" className="block text-gray-700 font-bold mb-2"
+              <label htmlFor="email" className="block text-gray-700 font-bold mb-2"
                 >Email</label
               >
               <input
@@ -45,7 +45,7 @@ const Page = () => {
 
               <p>
                 No account?
-                <Link href="/register" className="text-blue-500">Register</Link>
+                <Link href="/register" className="text-blue-500"> Register</Link>
               </p>
             </div>
           </form>
