@@ -23,7 +23,7 @@ const Page = () => {
             </div>
 
             <div className="mb-4">
-              <label for="email" className="block text-gray-700 font-bold mb-2"
+              <label htmlFor="email" className="block text-gray-700 font-bold mb-2"
                 >Email</label
               >
               <input
@@ -34,9 +34,21 @@ const Page = () => {
                 required
               />
             </div>
+            <div className="mb-4">
+              <label htmlFor="number" className="block text-gray-700 font-bold mb-2"
+                >Phone</label
+              >
+              <input
+                type="number"
+                id="number"
+                name="number"
+                className="border rounded w-full py-2 px-3"
+                required
+              />
+            </div>
 
             <div className="mb-4">
-              <label for="password" className="block text-gray-700 font-bold mb-2"
+              <label htmlFor="password" className="block text-gray-700 font-bold mb-2"
                 >Password</label
               >
               <input
@@ -66,14 +78,14 @@ const Page = () => {
             <div className="flex flex-col gap-5">
               <button
                 type="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
               >
                 Register
               </button>
 
               <p>
                 Have an account?
-                <Link href="/login" className="text-blue-500"> Login</Link>
+                <Link href="/login" className="text-green-500"> Login</Link>
               </p>
             </div>
           </form>

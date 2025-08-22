@@ -38,14 +38,14 @@ const Page = () => {
             <div className="flex flex-col gap-5">
               <button
                 type="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+                className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
               >
                 Login
               </button>
 
               <p>
                 No account?
-                <Link href="/register" className="text-blue-500"> Register</Link>
+                <Link href="/register" className="text-green-600"> Register</Link>
               </p>
             </div>
           </form>

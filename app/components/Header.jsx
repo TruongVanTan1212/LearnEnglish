@@ -1,13 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import Logo from "@/app/assets/images/logo.svg"
-import {FaSignInAlt,FaSignOutAlt,FaBuilding, FaUser} from "react-icons/fa"
+import {FaSignOutAlt, FaUser} from "react-icons/fa"
 import { GrResources } from "react-icons/gr";
 
 const Header = () => {
   return (
       //<!-- Header -->
-      <header className="bg-gray-100">
+      <header className="bg-green-500">
       <nav className="mx-auto  px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
@@ -23,22 +23,28 @@ const Header = () => {
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
                   href="/"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-green-700 hover:text-white"
                 >
-                  Rooms
+                  Giáo Viên
                 </Link>
                 {/*<!-- Logged In Only -->*/}
                 <Link
                   href="/teachers"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-green-700 hover:text-white"
                 >
-                  Bookings
+                  Bog
                 </Link>
                 <Link
                   href="/add-room"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-green-700 hover:text-white"
                 >
-                  Add Room
+                  Đánh giá của Học Viên
+                </Link>
+                 <Link
+                  href="/add-room"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-green-700 hover:text-white"
+                >
+                  Giới thiệu
                 </Link>
               </div>
             </div>
@@ -47,26 +53,29 @@ const Header = () => {
           <div className="ml-auto">     
             <div className="ml-4 flex items-center md:ml-6">
              {/*<!-- Logged Out Only -->*/} 
-              <Link
-                href="/login"
-                className="mr-3 text-gray-800 hover:text-gray-600"
-              >
-                <FaUser className=" inline mr-1"/> Login
-              </Link>
-              <Link
+             <Link
                 href="/register"
-                className="mr-3 text-gray-800 hover:text-gray-600"
+                className="bg-orange-400 text-white px-4 py-1 rounded-lg  mr-5
+                            transition-transform duration-300 hover:scale-105 hover:shadow-lg"
               >
-                <FaSignInAlt className=" inline mr-1" /> Register
-              </Link>
-              <Link href="/my-rooms">
-                <GrResources className=" inline mr-1"/> My Source
+                 Đăng ký học thử ngay
               </Link>
               <Link
                 href="/login"
-                className="mx-3 text-gray-800 hover:text-gray-600"
+                className="mr-3 text-gray-800 hover:text-white"
               >
-                <FaSignOutAlt className=" inline mr-1"/>   Sign Out
+                <FaUser className=" inline mr-1"/> Đăng Nhập
+              </Link>
+              <Link href="/my-rooms" 
+                    className="mr-3 text-gray-800 hover:text-white"
+              >
+                <GrResources className=" inline mr-1"/> Khoá học của tôi 
+              </Link>
+              <Link
+                href="/login"
+                className="mx-3 text-gray-800 hover:text-white"
+              >
+                <FaSignOutAlt className=" inline mr-1"/>  Đăng Xuất
               </Link>
             </div>
           </div>

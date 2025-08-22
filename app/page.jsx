@@ -1,121 +1,173 @@
 import Image from "next/image";  
 import Link from "next/link";
+import { GrLocation } from "react-icons/gr"; 
+import { FaUserGraduate } from "react-icons/fa";
+import { MdOutlineDiversity3, MdSupportAgent  } from "react-icons/md";
 export default function Home() {
   return (
     <>
         {/*<!-- Hero -->*/}
-        <section className="flex flex-col md:flex-row items-center px-8 py-16 md:py-24">
+        <section className="flex flex-col md:flex-row items-center px-8 py-16 md:py-24 max-w-7xl mx-auto">
             <div className="flex-1">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 Learn English 1-on-1 <br /> with your best-fit teacher
             </h1>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
-                Sign up for a free trial
+            <button className="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600
+                                transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                Đăng ký ngay
             </button>
             </div>
-            <div className="flex-1 mt-8 md:mt-0">
-            <div className="w-full h-64 bg-gray-300 rounded-lg flex items-center justify-center">
-                <span className="text-gray-500">Video/Image</span>
+            <div className="flex-1 mt-8 md:mt-0 ml-16">
+            <div className=" w-full h-70 bg-gray-300 rounded-lg flex items-center justify-center">
+                <iframe 
+                    className="w-full h-70"
+                    src="https://www.youtube.com/embed/YWf9bOSLvdo" 
+                    title="Teacher Ashley - E-Talk"
+                    frameBorder="0" 
+                    allowFullScreen>
+          </iframe>
             </div>
             </div>
         </section>
 
         {/*<!-- Why choose us -->*/}
-        <section className="px-8 py-16 bg-white">
-            <h2 className="text-2xl font-bold text-center mb-10">Why choose us?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="bg-gray-100 p-6 rounded-lg text-center">
-                <div className="w-12 h-12 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                <h3 className="font-semibold">Personalized teacher</h3>
-                <p className="text-gray-600 text-sm mt-2">Find the perfect match for your goals</p>
+        <section className="px-8 py-16 bg-green-800">
+            <h2 className="text-5xl font-bold text-center mb-10 text-white">Tại sao lại chọn chúng tôi?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="bg-green-50 p-6 rounded-lg text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <div className="w-12 h-12 bg-orange-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <GrLocation className=" h-8 w-8 text-black font-bold text-lg" />
+                </div>
+                <h3 className="font-semibold">Tập trung, hiệu quả, tiến bộ nhanh</h3>
+                <p className="text-gray-600 text-sm mt-2 text-left flex">
+                  Học 1–1 giúp tăng tốc đến 3× so với lớp truyền thống.
+                  <br/>
+                  <br/>
+                   Lộ trình “may đo” theo mục tiêu và trình độ.
+                  <br/>
+                  <br/>
+                   Sửa lỗi tức thì, tiến bộ nhanh – chắc – bền.
+                </p>
             </div>
-            <div className="bg-gray-100 p-6 rounded-lg text-center">
-                <div className="w-12 h-12 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                <h3 className="font-semibold">Free trial</h3>
-                <p className="text-gray-600 text-sm mt-2">Start with a free className before committing</p>
+            <div className="bg-green-50 p-6 rounded-lg text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <div className="w-12 h-12 bg-blue-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <FaUserGraduate className=" h-8 w-8 text-black font-bold text-lg"/>
+                </div>
+                <h3 className="font-semibold">Học với giáo viên bản ngữ</h3>
+                <p className="text-gray-600 text-sm mt-2 text-left">
+                   Giáo viên bản ngữ giúp bạn sử dụng tiếng Anh tự nhiên, ứng dụng thực tế cao.
+                  <br/>
+                  <br/>
+                   Giảm bớt các bài học ngữ pháp khô khan.
+                  <br/>
+                  <br/>
+                   Phát âm chuẩn, tự tin giao tiếp với người nước ngoài.
+                </p>
             </div>
-            <div className="bg-gray-100 p-6 rounded-lg text-center">
-                <div className="w-12 h-12 bg-gray-300 rounded-full mx-auto mb-4"></div>
-                <h3 className="font-semibold">Flexible scheduling</h3>
-                <p className="text-gray-600 text-sm mt-2">Book classes at times that suit you</p>
+            <div className="bg-green-50 p-6 rounded-lg text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <div className="w-12 h-12 bg-red-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <MdOutlineDiversity3 className=" h-8 w-8 text-black font-bold text-lg"/>
+                </div>
+                <h3 className="font-semibold">Đa dạng, linh hoạt, tiết kiệm</h3>
+                <p className="text-gray-600 text-sm mt-2 text-left">
+                   Học trực tuyến với giáo viên toàn cầu, học phí tiết kiệm hơn.
+                  <br/>
+                  <br/>
+                   Tiết kiệm 1-2 giờ di chuyển mỗi buổi học.
+                  <br/>
+                  <br/>
+                   Thời gian linh hoạt, học bất cứ lúc nào: sáng sớm, trưa hay tối muộn
+                </p>
+            </div>
+            <div className="bg-green-50 p-6 rounded-lg text-center not-only:transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                <div className="w-12 h-12 bg-yellow-400 rounded-full mx-auto mb-4 flex items-center justify-center ">
+                  <MdSupportAgent className=" h-8 w-8 text-black font-bold text-lg" />
+                </div>
+                <h3 className="font-semibold">Hỗ trợ 24/7</h3>
+                <p className="text-gray-600 text-sm mt-2 text-left">
+                   Tự do đổi lịch hoặc đổi giáo viên
+                  <br/>
+                  <br/>
+                   Dễ dàng bảo lưu / chuyển nhượng khóa học
+                </p>
             </div>
             </div>
         </section>
         {/*top teacher*/}
         <section className="px-8 py-16">
-            <h2 className="text-2xl font-bold text-center mb-10 ">Featured teachers</h2>
+            <h2 className="text-4xl font-bold text-center mb-10 ">Featured teachers</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              <div className="bg-white shadow rounded-lg p-6 text-center 
+              <div className="bg-green-50 shadow rounded-lg p-6 text-center 
                                 transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <div className="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4"></div>
                 <h3 className="font-semibold">Name</h3>
                 <p className="text-sm text-gray-500">Tổng số buổi dạy</p>
                 <div className="flex justify-center text-yellow-500 mt-2">★★★★★</div>
-                <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                  Học thử miễn phí
+                <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                  Xem chi tiết
                 </button>
               </div>
-              <div className="bg-white shadow rounded-lg p-6 text-center">
+              <div className="bg-green-50 shadow rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <div className="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4"></div>
                 <h3 className="font-semibold">Name</h3>
                 <p className="text-sm text-gray-500">Country</p>
                 <div className="flex justify-center text-yellow-500 mt-2">★★★★★</div>
-                <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                  Book trial
+                <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                  Xem chi tiết
                 </button>
               </div>
-              <div className="bg-white shadow rounded-lg p-6 text-center">
+              <div className="bg-green-50 shadow rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <div className="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4"></div>
                 <h3 className="font-semibold">Name</h3>
                 <p className="text-sm text-gray-500">Country</p>
                 <div className="flex justify-center text-yellow-500 mt-2">★★★★★</div>
-                <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                  Book trial
+                <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                  Xem chi tiết
                 </button>
               </div>
-              <div className="bg-white shadow rounded-lg p-6 text-center">
+              <div className="bg-green-50 shadow rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <div className="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4"></div>
                 <h3 className="font-semibold">Name</h3>
                 <p className="text-sm text-gray-500">Country</p>
                 <div className="flex justify-center text-yellow-500 mt-2">★★★★★</div>
-                <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                  Book trial
+                <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                  Xem chi tiết
                 </button>
               </div>
-               <div className="bg-white shadow rounded-lg p-6 text-center">
+               <div className="bg-green-50 shadow rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <div className="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4"></div>
                 <h3 className="font-semibold">Name</h3>
                 <p className="text-sm text-gray-500">Country</p>
                 <div className="flex justify-center text-yellow-500 mt-2">★★★★★</div>
-                <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                  Book trial
+                <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                  Xem chi tiết
                 </button>
               </div>
-              <div className="bg-white shadow rounded-lg p-6 text-center">
+              <div className="bg-green-50 shadow rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <div className="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4"></div>
                 <h3 className="font-semibold">Name</h3>
                 <p className="text-sm text-gray-500">Country</p>
                 <div className="flex justify-center text-yellow-500 mt-2">★★★★★</div>
-                <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                  Book trial
+                <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                  Xem chi tiết
                 </button>
               </div>
-              <div className="bg-white shadow rounded-lg p-6 text-center">
+              <div className="bg-green-50 shadow rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <div className="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4"></div>
                 <h3 className="font-semibold">Name</h3>
                 <p className="text-sm text-gray-500">Country</p>
                 <div className="flex justify-center text-yellow-500 mt-2">★★★★★</div>
-                <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                  Book trial
+                <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                  Xem chi tiết
                 </button>
               </div>
-              <div className="bg-white shadow rounded-lg p-6 text-center">
+              <div className="bg-green-50 shadow rounded-lg p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-lg">
                 <div className="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4"></div>
                 <h3 className="font-semibold">Name</h3>
                 <p className="text-sm text-gray-500">Country</p>
                 <div className="flex justify-center text-yellow-500 mt-2">★★★★★</div>
-                <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                  Book trial
+                <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                  Xem chi tiết
                 </button>
               </div>
             </div>
@@ -123,86 +175,89 @@ export default function Home() {
 
           {/*<!-- 1) HOW IT WORKS -->*/}
     <section id="how-it-works" aria-labelledby="how-title" className="px-8 py-16">
-      <div className="text-center">
-        <h2 id="how-title" className="text-3xl sm:text-4xl font-bold tracking-tight">How it works</h2>
-        <p className="mt-3 text-slate-600 max-w-2xl mx-auto">4 simple steps to start learning English 1‑on‑1 with your best‑fit teacher.</p>
-      </div>
-
+      <div className="text-center bg-green-100">
+        <h2 id="how-title" className="text-3xl sm:text-4xl font-bold tracking-tight">Quy trình học như thế nào ?</h2>
+       
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5 max-w-6xl mx-auto">
         {/* <!-- Step 1 --> */}
-        <div className="group relative rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:shadow-md">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 ring-1 ring-indigo-100">
+        <div className="group relative rounded-2xl bg-green-600 p-6 shadow-sm ring-1 ring-slate-200 transition hover:shadow-md">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 ring-1 ring-indigo-100">
             {/* <!-- User icon --> */}
              <div
                 className="flex h-12 w-12 items-center justify-center rounded-full
-                 text-indigo-600 font-bold text-lg">
+                 text-green-600 font-bold text-lg">
                 1
             </div>
           </div>
-          <h3 className="mt-5 text-lg font-semibold">Sign up</h3>
-          <p className="mt-2 text-sm leading-6 text-slate-600">Create a free account to personalize your learning goals.</p>
+          <h3 className="mt-5 text-lg font-semibold text-white">Trở thành thành viên</h3>
+          <p className="mt-2 text-sm leading-6 text-white ">Đăng ký tài khoản và tham gia cộng đồng giáo viên và học viên.</p>
+          <ul className="mt-2 text-sm leading-6 text-white ">
+            <li>Đăng ký học <Link href="" className="text-black">Tại đây</Link></li>
+            <li>Đăng ký làm giáo viên <Link href="" className="text-green-800">Tại đây</Link></li>
+          </ul>
         </div>
 
         {/*<!-- Step 2 -->*/}
-        <div className="group relative rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:shadow-md">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 ring-1 ring-indigo-100">
+        <div className="group relative rounded-2xl bg-green-600  p-6 shadow-sm ring-1 ring-slate-200 transition hover:shadow-md">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 ring-1 ring-indigo-100">
             {/* <!-- Cap icon --> */}
             <div
                 className="flex h-12 w-12 items-center justify-center rounded-full
-                 text-indigo-600 font-bold text-lg">
+                 text-green-600 font-bold text-lg">
                 2
             </div>
           </div>
-          <h3 className="mt-5 text-lg font-semibold">Choose a teacher</h3>
-          <p className="mt-2 text-sm leading-6 text-slate-600">Match by timezone, specialty (IELTS/TOEIC/Business), and rating.</p>
+          <h3 className="mt-5 text-lg font-semibold text-white ">Choose a teacher</h3>
+          <p className="mt-2 text-sm leading-6 text-white">Match by timezone, specialty (IELTS/TOEIC/Business), and rating.</p>
         </div>
 
         {/* <!-- Step 3 --> */}
-        <div className="group relative rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:shadow-md">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 ring-1 ring-indigo-100">
+        <div className="group relative rounded-2xl bg-green-600 text-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:shadow-md">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 ring-1 ring-indigo-100">
             {/* <!-- Calendar icon --> */}
             <div
                 className="flex h-12 w-12 items-center justify-center rounded-full
-                 text-indigo-600 font-bold text-lg">
+                 text-green-600 font-bold text-lg">
                 3
             </div>
           </div>
           <h3 className="mt-5 text-lg font-semibold">Book a lesson</h3>
-          <p className="mt-2 text-sm leading-6 text-slate-600">Pick the date/time that fits your schedule—reschedule anytime.</p>
+          <p className="mt-2 text-sm leading-6 ">Pick the date/time that fits your schedule—reschedule anytime.</p>
         </div>
 
         {/* <!-- Step 4 --> */}
-        <div className="group relative rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:shadow-md">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 ring-1 ring-indigo-100">
+        <div className="group relative rounded-2xl bg-green-600 text-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:shadow-md">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 ring-1 ring-indigo-100">
             {/* <!-- Play icon --> */}
             <div
                 className="flex h-12 w-12 items-center justify-center rounded-full
-                 text-indigo-600 font-bold text-lg">
+                 text-green-600 font-bold text-lg">
                 4
             </div>
           </div>
           <h3 className="mt-5 text-lg font-semibold">Start learning</h3>
-          <p className="mt-2 text-sm leading-6 text-slate-600">Join your live 1‑on‑1 video call and track progress after each lesson.</p>
+          <p className="mt-2 text-sm leading-6 ">Join your live 1‑on‑1 video call and track progress after each lesson.</p>
         </div>
         {/* <!-- Step 5 --> */}
-        <div className="group relative rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:shadow-md">
+        <div className="group relative rounded-2xl bg-green-600 text-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:shadow-md">
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 ring-1 ring-indigo-100">
             {/* <!-- Play icon --> */}
             <div
                 className="flex h-12 w-12 items-center justify-center rounded-full
-                 text-indigo-600 font-bold text-lg">
+                 text-green-600 font-bold text-lg">
                 5
             </div>
           </div>
           <h3 className="mt-5 text-lg font-semibold">Start learning</h3>
-          <p className="mt-2 text-sm leading-6 text-slate-600">Join your live 1‑on‑1 video call and track progress after each lesson.</p>
+          <p className="mt-2 text-sm leading-6 ">Join your live 1‑on‑1 video call and track progress after each lesson.</p>
         </div>
       </div>
       <div className=" flex justify-center items-center px-4 py-8 ">  
-            <button className=" bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700
+            <button className=" bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700
                                   transition-transform duration-300 hover:scale-105 hover:shadow-lg ">
                 Sign up for a free trial
             </button>
+      </div>
       </div>
     </section>
        
@@ -292,7 +347,7 @@ export default function Home() {
     <section id="faq" aria-labelledby="faq-title" className="scroll-mt-24 px-8 py-16">
       <div className="text-center">
         <h2 id="faq-title" className="text-3xl sm:text-4xl font-bold tracking-tight">FAQ</h2>
-        <p className="mt-3 text-slate-600 max-w-2xl mx-auto">Everything you need to know.</p>
+        <p className="mt-3 text-slate-600 max-w-2xl mx-auto">Everything you need to kn className="text-blue-600"ow.</p>
       </div>
 
       <div className="mt-10 mx-auto max-w-3xl divide-y divide-slate-200 rounded-2xl bg-white ring-1 ring-slate-200 shadow-sm max-w-6xl mx-auto">
